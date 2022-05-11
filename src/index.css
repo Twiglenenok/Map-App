@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./components/assets/BackGr.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 code {
@@ -18,14 +23,42 @@ padding: 0;
 }
 
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0;
   padding: 0;
   height: 40px;
-  background-color: aliceblue;
 }
+
+.logo {
+color: white;
+font-weight: 500;
+margin-left: 2rem;
+}
+
+
+
 .nav-link {
   text-decoration: none;
-  color: black;
-  padding-left: 1rem;
+  color: rgba(235, 235, 235, 0.7);
+  margin-right: 2rem;
+  font-weight: 500;
+
+}
+
+.nav-link img:hover {
+  transition: all 0.6s ease-in-out;
+  transform: rotate(360deg) scale(1.2);
+}
+
+.nav-link:active {
+  color:yellow;
+}
+
+.nav-link:hover {
+  transition: 0.3s ease;
+  transform: scale(1.1);
+  color: rgba(255, 255, 255, 1);
 }

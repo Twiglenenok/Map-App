@@ -1,13 +1,20 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import logo from "./assets/logo.png"
 
 export const Layout:React.FC = () => {
     return (
         <>
         <header className="navbar">
-            <Link className="nav-link" to="/main">Main</Link>
-            <Link className="nav-link" to="/add">Add the point</Link>
-            <Link className="nav-link" to="/list">Points List</Link>
+                <Link className="nav-link" to="/">
+                <img alt="logo" src={logo} width="30px" height="30px"></img>
+                TEST APP
+                </Link>
+            <span className="menu">
+                <Link className="nav-link" to="/main">MAIN</Link>
+                <Link className="nav-link" to="/add">ADD THE POINT</Link>
+                <Link className="nav-link" to="/list">POINTS LIST</Link>
+            </span>
         </header>
 
         <main className="container">
