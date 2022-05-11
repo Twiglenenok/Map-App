@@ -1,25 +1,23 @@
 import React from 'react';
 import './App.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import { Navbar } from './components/navbar';
+import { WelcomePage } from './components/Pages/WelcomePage';
+import { Route, Routes, Link } from "react-router-dom";
+import { MainPage } from './components/Pages/MainPage';
+import { AddPointPage } from './components/Pages/AddPointPage';
+import { ListPointPage } from './components/Pages/ListPointPage';
+import { Layout } from './components/Layout';
 
 const App:React.FC = () => {
   return (
     <>
-    <Navbar/>
-    <div className='map-box'>
-<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
-  <TileLayer
-    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-  />
-  <Marker position={[51.505, -0.09]}>
-    <Popup>
-      A pretty CSS3 popup. <br /> Easily customizable.
-    </Popup>
-  </Marker>
-</MapContainer>
-</div>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+            <Route index element={<WelcomePage/>}/>
+            <Route path="/main" element={<MainPage/>}/>
+            <Route path="/add" element={<AddPointPage/>}/>
+            <Route path="/list" element={<ListPointPage/>}/>
+        </Route>
+      </Routes>
 </>
   );
 }
