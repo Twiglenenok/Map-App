@@ -36,6 +36,12 @@ export const PointsProvider = ({ children }: any) => {
         },
     ])
 
+    const [pointLocation, setPointLocation] = useState<any>([0, 0]);
+
+    function locationHandler(location :any) {
+        setPointLocation(location)
+    }
+
     return (
         <PointsContext.Provider value={points}>
             { children }

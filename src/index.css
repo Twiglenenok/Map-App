@@ -19,8 +19,8 @@ code {
 }
 
 .leaflet-container{
-  height: 400px;
-  width: 600px;
+  height: 500px;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
@@ -108,4 +108,33 @@ object-fit: cover;
   transform: scale(1.1);
   color: rgba(165, 10, 10, 1);
   background-color: rgba(240, 241, 241, 0.44);
+}
+
+.point-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.map-box {
+  width: 600px;
+}
+
+.form-group {
+  height: 500px;
+  width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: aliceblue;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
