@@ -1,6 +1,6 @@
 export interface pointsProps  {
     title: string,
     text: string,
-    date: string,
-    location: string
-  };
+    date: number | string,
+    location: [number, number]
+};
