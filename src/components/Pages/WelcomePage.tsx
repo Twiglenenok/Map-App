@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const WelcomePage:React.FC = () => {
     return (
-        <div className="main-welcome">
+        <>
         <div className="content">
                 <h1>
                     Open the wounder of MapClicking
@@ -16,8 +16,7 @@ export const WelcomePage:React.FC = () => {
               loop autoPlay
               src={videoBg}
              />
-
         </div>
-        </div>
+        </>
     )
 }

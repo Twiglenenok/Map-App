@@ -38,11 +38,11 @@ padding: 0;
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 40px;
+  height: 60px;
 }
 
 
-.nav-link {
+.menu .nav-link {
   text-decoration: none;
   color: rgba(235, 235, 235, 0.7);
   margin-right: 2rem;
@@ -55,13 +55,15 @@ padding: 0;
   transform: rotate(360deg) scale(1.2);
 }
 
-.nav-link:active {
-  color:yellow;
+.active-link {
+  text-decoration: none;
+  margin-right: 2rem;
+  font-weight: 500;
+  color: rgb(250, 199, 199);
 }
 
-.nav-link:hover {
-  transition: 0.3s ease;
-  transform: scale(1.1);
+.menu .nav-link:hover {
+  transition: all 0.3s ease-in-out;
   color: rgba(255, 255, 255, 1);
 }
 

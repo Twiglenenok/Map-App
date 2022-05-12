@@ -1,18 +1,20 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import logo from "./assets/logo.png"
+
+const setActive = ({isActive}: any) => isActive ? "active-link" : "nav-link";
 
 export const Layout:React.FC = () => {
     return (
         <>
         <header className="navbar">
-                <Link className="nav-link" to="/">
-                    <img alt="logo" src={logo} width="30px" height="30px"></img>
-                </Link>
+                <NavLink to="/" className={setActive} >
+                    <img alt="logo" src={logo} width="40px" height="40px"></img>
+                </NavLink>
             <span className="menu">
-                <Link className="nav-link" to="/main">MAIN</Link>
-                <Link className="nav-link" to="/add">ADD THE POINT</Link>
-                <Link className="nav-link" to="/list">POINTS LIST</Link>
+                <NavLink to="/main" className={setActive}>MAIN</NavLink>
+                <NavLink to="/add" className={setActive}>ADD THE POINT</NavLink>
+                <NavLink to="/list" className={setActive}>POINTS LIST</NavLink>
             </span>
         </header>
 
