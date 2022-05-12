@@ -7,8 +7,7 @@ export const Layout:React.FC = () => {
         <>
         <header className="navbar">
                 <Link className="nav-link" to="/">
-                <img alt="logo" src={logo} width="30px" height="30px"></img>
-                TEST APP
+                    <img alt="logo" src={logo} width="30px" height="30px"></img>
                 </Link>
             <span className="menu">
                 <Link className="nav-link" to="/main">MAIN</Link>
