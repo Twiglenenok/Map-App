@@ -6,8 +6,8 @@ export const MainPage:React.FC = () => {
 
 
     return (
-  <>
-  <Map/>
-  </>
+  <div className="mainPage-mapbox">
+  <Map></Map>
+  </div>
     )
 }

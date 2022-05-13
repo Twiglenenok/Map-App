@@ -26,18 +26,19 @@ export const AddPointPage:React.FC = () => {
 
     const {addPointHandler} = useContext(PointsContext)
 
+    console.log(pointLocation);
 
     return (
         <locationContext.Provider value={locationHandler}>
         <div className="point-page">
-        <div className="map-box">
+            <div className="addPage-mapbox">
             <Map></Map>
-        </div>
+            </div>
             <div className="form-group">
-            <input className="add-input" value={pointTitle} onChange={evt => titleHandler(evt)} id="title" type='text' placeholder="Введите название места"></input>
-            <input className="add-input" value={pointText} onChange={evt => textHandler(evt)} id="text" type='text' placeholder="Введите описание места"></input>
-            <input className="add-input" readOnly value={String(pointLocation.join(' '))} id="text" type='text' placeholder="Просто щелкни на карту!"></input>
-            <button className="btn" onClick={() => addPointHandler(pointTitle, pointText, pointLocation)}>Добавить точку</button>
+            <input className="add-input" value={pointTitle} onChange={evt => titleHandler(evt)} id="title" type='text' required placeholder="Введите название места"></input>
+            <input className="add-input" value={pointText} onChange={evt => textHandler(evt)} id="text" type='text' required placeholder="Введите описание места"></input>
+            <input className="add-input" readOnly value={String(pointLocation.join(' '))} id="location" type='text' placeholder="Просто щелкни на карту!"></input>
+            <button className="btn" onClick={() => addPointHandler(pointTitle, pointText, pointLocation)} disabled={pointTitle === '' ? true : false}>{pointTitle === '' ? "Введите название и щелкните по карте" : pointLocation == [0, 0] ? "Кликни по карте!" : "Добавить точку"}</button>
         </div>
         </div>
         </locationContext.Provider>

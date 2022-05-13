@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import { Map } from "../map";
-import { pointsProps } from "../../interfaces";
 import { PointsContext } from "../../context/context";
 import trash from "../assets/delete.png"
 
@@ -12,8 +11,10 @@ export const ListPointPage:React.FC = () => {
 
     return (
         <div className="point-page">
+            <div className="listPage-mapbox">
             <Map/>
-            <div className="form-group">
+            </div>
+            <div className="points-container">
                 <ul>
                     {points.map((point) => {
                         return (

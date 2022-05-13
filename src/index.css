@@ -19,17 +19,15 @@ code {
 }
 
 .leaflet-container{
-  height: 500px;
-  width: 70%;
+  height: 600px;
+  width: 100%;
+  margin-top: 1rem;
+  border: solid 2px white;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1rem;
+  border-radius: 15%;
 }
 
-.map-box {
-margin: 0;
-padding: 0;
-}
 
 .navbar {
   display: flex;
@@ -122,19 +120,33 @@ object-fit: cover;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
-.map-box {
+.addPage-mapbox {
+  width: 420px;
+}
+
+.listPage-mapbox {
   width: 600px;
 }
+
+.mainPage-mapbox {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  }
+  
 
 .form-group {
   height: 500px;
   width: 420px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 1rem;
-  background-color: #acafb6d2;
+  background-image: url(./components/assets/paper.jpg);
+  border-radius: 15%;
+  border: solid 2px white;
 }
 
 .form-group {
@@ -145,9 +157,13 @@ object-fit: cover;
 }
 
 .add-input {
-  width: 70%;
+  width: 270px;
   height: 2rem;
-  border-radius: 8%;
+  background-color: #cac5bb00;
+  color: black;
+  font-size: medium;
+  border: solid 0.5px rgba(204, 196, 151, 0.781);
+  font-weight: bold;
 }
 
 .btn {
@@ -169,12 +185,23 @@ object-fit: cover;
   background-color: rgba(116, 255, 151, 0.767)
 }
 
+.btn:disabled {
+  background-color: rgba(121, 121, 121, 0.719);
+  color:black;
+  font-size: small;
+}
+
 .list-item {
+  padding-top: 7px;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.delete-btn {
+  margin-right: 10px;
 }
 
 .delete-btn:hover {
@@ -189,4 +216,13 @@ object-fit: cover;
 .point-text {
 font-style: oblique;
 
+}
+
+.points-container {
+  height: 500px;
+  width: 420px;
+  margin-top: 1rem;
+  background-image: url(./components/assets/note-page.PNG);
+  padding-top: 37px;
+  padding-left: 20px;
 }
