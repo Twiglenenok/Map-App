@@ -38,7 +38,7 @@ export const PointsProvider = ({ children }: any) => {
 
     const [pointLocation, setPointLocation] = useState<any>([0, 0]);
 
-    function locationHandler(location :any) {
+    function locationHandler(location : object) {
         setPointLocation(location)
     }
 

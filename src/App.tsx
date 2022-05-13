@@ -6,6 +6,7 @@ import { AddPointPage } from './components/Pages/AddPointPage';
 import { ListPointPage } from './components/Pages/ListPointPage';
 import { Layout } from './components/Layout';
 import { PointsProvider } from './context/context';
+import { LocationContext } from 'react-router/lib/context';
 
 const App:React.FC = () => {
   return (
