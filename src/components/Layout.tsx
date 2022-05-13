@@ -9,7 +9,7 @@ export const Layout:React.FC = () => {
         <>
         <header className="navbar">
                 <NavLink to="/" className={setActive} >
-                    <img alt="logo" src={logo} width="40px" height="40px"></img>
+                    <img alt="logo" src={logo} max-width="40px" height="40px"></img>
                 </NavLink>
             <span className="menu">
                 <NavLink to="/main" className={setActive}>MAIN</NavLink>
@@ -18,13 +18,10 @@ export const Layout:React.FC = () => {
             </span>
         </header>
 
-        <main className="container">
+        <main className="main">
             <Outlet/>
         </main>
 
-        <footer className="container">
-            github.com/twiglenenok
-        </footer>
         </>
     )
 }

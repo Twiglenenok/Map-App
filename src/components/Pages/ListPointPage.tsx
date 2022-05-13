@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { Map } from "../map";
-import { PointsContext } from "../../context/context";
+import { PointsContext } from "../../context/contextProvider";
 import trash from "../assets/delete.png"
 
 

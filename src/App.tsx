@@ -5,7 +5,7 @@ import { MainPage } from './components/Pages/MainPage';
 import { AddPointPage } from './components/Pages/AddPointPage';
 import { ListPointPage } from './components/Pages/ListPointPage';
 import { Layout } from './components/Layout';
-import { PointsProvider } from './context/context';
+import { PointsProvider } from './context/contextProvider';
 
 const App:React.FC = () => {
   return (

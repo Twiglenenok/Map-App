@@ -1,13 +1,13 @@
-import { useContext, useState} from "react";
+import { useContext} from "react";
 import { useMapEvents } from "react-leaflet";
 import {locationContext} from "./Pages/AddPointPage"
-import { locationType } from "../interfaces";
+
 
 
 
 export function AddMarkerToClick() {
 
-    const locationHandler = useContext(locationContext)
+    const {locationHandler} = useContext(locationContext)
       
     const map = useMapEvents({
       click(evt) {

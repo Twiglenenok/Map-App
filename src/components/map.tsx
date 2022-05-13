@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { PointsContext } from "../context/context";
+import { PointsContext } from "../context/contextProvider";
 import { AddMarkerToClick } from "./addMarkerToClick";
 
 

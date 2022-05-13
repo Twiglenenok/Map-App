@@ -147,9 +147,6 @@ object-fit: cover;
   background-image: url(./components/assets/paper.jpg);
   border-radius: 15%;
   border: solid 2px white;
-}
-
-.form-group {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -226,3 +223,4 @@ font-style: oblique;
   padding-top: 37px;
   padding-left: 20px;
 }
+
