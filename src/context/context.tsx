@@ -1,16 +1,21 @@
-import React, { createContext, useState } from "react";
-import { pointsProps } from "../interfaces";
 
-export const PointsContext = createContext<pointsProps[]>(
-    [
+import React, { createContext, useState } from "react";
+import { locationType, pointsProps } from "../interfaces";
+import { IProvider } from "../interfaces";
+
+const providerState : IProvider = {
+    points: [
         {
             title: "Гостинный двор",
             text: "Памятник истории и архитектуры XVIII века,в прошлом — центральный оптовый Гостиный двор, с начала XX века — универмаг.",
             date: Date.now(),
             location: [59.9345, 30.3331]
         }
-    ]
-);
+    ],
+    addPointHandler: (title : string, text : string, location : locationType) => {}
+}
+
+export const PointsContext = createContext<IProvider>(providerState);
 
 
 export const PointsProvider = ({ children }: any) => {
@@ -36,14 +41,18 @@ export const PointsProvider = ({ children }: any) => {
         },
     ])
 
-    const [pointLocation, setPointLocation] = useState<any>([0, 0]);
-
-    function locationHandler(location : object) {
-        setPointLocation(location)
+    function addPointHandler(title : string, text : string, location : locationType) {
+        const newPoint: pointsProps = {
+            title: title,
+            text: text,
+            date: Date.now(),
+            location: location
+        }
+        setPoints(prev => [newPoint,...prev])
     }
 
     return (
-        <PointsContext.Provider value={points}>
+        <PointsContext.Provider value={{points, addPointHandler}}>
             { children }
             </PointsContext.Provider>
     )

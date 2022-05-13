@@ -7,7 +7,7 @@ import trash from "../assets/delete.png"
 
 export const ListPointPage:React.FC = () => {
 
-    const points = useContext<pointsProps[]>(PointsContext);
+    const {points} = useContext(PointsContext);
 
     return (
         <div className="point-page">

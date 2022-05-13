@@ -1,10 +1,12 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { Map } from "../map";
 import { locationProps, locationType } from "../../interfaces";
+import { PointsContext } from "../../context/context";
 
 export const locationContext = createContext<any>('');
 
 export const AddPointPage:React.FC = () => {
+
 
     const [pointTitle, setPointTitle] = useState<string>('');
     const [pointText, setPointText] = useState<string>('');
@@ -22,6 +24,8 @@ export const AddPointPage:React.FC = () => {
         setPointLocation([lat, lng]);
     }
 
+    const {addPointHandler} = useContext(PointsContext)
+
 
     return (
         <locationContext.Provider value={locationHandler}>
@@ -33,7 +37,7 @@ export const AddPointPage:React.FC = () => {
             <input className="add-input" value={pointTitle} onChange={evt => titleHandler(evt)} id="title" type='text' placeholder="Введите название места"></input>
             <input className="add-input" value={pointText} onChange={evt => textHandler(evt)} id="text" type='text' placeholder="Введите описание места"></input>
             <input className="add-input" readOnly value={String(pointLocation.join(' '))} id="text" type='text' placeholder="Просто щелкни на карту!"></input>
-            <button className="btn" onClick={() => {}}>Добавить точку</button>
+            <button className="btn" onClick={() => addPointHandler(pointTitle, pointText, pointLocation)}>Добавить точку</button>
         </div>
         </div>
         </locationContext.Provider>

@@ -5,13 +5,11 @@ import { pointsProps } from "../interfaces";
 import { AddMarkerToClick } from "./addMarkerToClick";
 
 
-/*interface MapProps {
-  locationHandler: (lat: number, lng: number) => void | null;
-}*/
 
-export const Map:React.FC = (props) => {
 
-    const points = useContext<pointsProps[]>(PointsContext);
+export const Map:React.FC = () => {
+
+    const {points} = useContext(PointsContext);
 
 
     return (
