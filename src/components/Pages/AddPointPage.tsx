@@ -5,8 +5,8 @@ import { PointsContext } from "../../context/context";
 
 export const locationContext = createContext<any>('');
 
-export const AddPointPage:React.FC = () => {
 
+export const AddPointPage:React.FC = () => {
 
     const [pointTitle, setPointTitle] = useState<string>('');
     const [pointText, setPointText] = useState<string>('');

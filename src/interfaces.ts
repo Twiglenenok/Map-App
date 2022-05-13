@@ -5,8 +5,9 @@ export interface pointsProps  {
     
     title: string,
     text: string,
-    date: number ,
-    location: locationType
+    date: string,
+    location: locationType,
+    id: number
 };
 
   export interface locationProps {
@@ -15,5 +16,6 @@ export interface pointsProps  {
 
 export interface IProvider {
     points: pointsProps[],
-    addPointHandler: (title : string, text : string, location : locationType) => void
+    addPointHandler: (title : string, text : string, location : locationType) => void,
+    deletePointHandler: (id: number) => void
 }

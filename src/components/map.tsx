@@ -11,7 +11,6 @@ export const Map:React.FC = () => {
 
     const {points} = useContext(PointsContext);
 
-
     return (
         <div className='map-box'>
         <MapContainer
@@ -25,14 +24,16 @@ export const Map:React.FC = () => {
              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
          />
          {
-           points.map((point, i) => {
+           points.map((point) => {
              return (
-              <Marker key={i+2} position={point.location}>
+              <Marker key={point.id} position={point.location}>
               <Popup>
-               {point.title} <br /> 
-               {point.text}<br />
-               {point.date} <br />
-               {point.location.join(' ')}
+                <span>
+                  <span className="point-title">{point.title}</span> <br /> 
+                  <span className="point-text">{point.text}</span><br />
+                  {point.date} <br />
+                  Местоположение: {point.location.join(' ')}
+               </span>
               </Popup>
           </Marker>
              )
