@@ -129,6 +129,7 @@ object-fit: cover;
 
 .listPage-mapbox {
   width: 600px;
+  height: 600px;
 }
 
 .mainPage-mapbox {
@@ -136,7 +137,8 @@ object-fit: cover;
   padding: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 1000px;
+  width: 90%;
+  height: 600px;
   }
   
 
